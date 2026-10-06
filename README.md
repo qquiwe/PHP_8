@@ -29,7 +29,7 @@ $stmt = $pdo->prepare(
 $stmt->execute([':owner' => $owner, ':q' => '%' . $q . '%']);
 ```
 
-Перевірено вручну: `curl.exe -i "http://localhost:8000/ajax/api_list.php?q=' OR '1'='1"` —
+Перевірено вручну: `curl.exe -i "http://localhost:8000/ajax/api_list.php?q=%27%20OR%20%271%27%3D%271"` —
 повертає порожній список (жодного збігу), а не всі записи й не помилку SQL-синтаксису.
 
 ---
